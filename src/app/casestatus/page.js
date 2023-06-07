@@ -6,44 +6,17 @@ import {
 } from "@heroicons/react/24/outline";
 import EditStatus from "../components/EditStatus";
 import clientPromise from "../../../lib/mongodb";
-
-// export function getCases() {
-//   return [
-//     {
-//       caseid: "F-1111",
-//       statuscode: 12,
-//       status: "Fullfillment Complete",
-//     },
-//     {
-//       caseid: "F-2222",
-//       statuscode: 5,
-//       status: "3rd - QC Fix",
-//     },
-//     {
-//       caseid: "F-2323",
-//       statuscode: 6,
-//       status: "3rd - QC Fix Complete",
-//     },
-//     {
-//       caseid: "F-3333",
-//       statuscode: 7,
-//       status: "4th - QC Fix",
-//     },
-//     {
-//       caseid: "F-4444",
-//       statuscode: 9,
-//       status: "5th - QC Fix",
-//     },
-//     {
-//       caseid: "F-5555",
-//       statuscode: 11,
-//       status: "Redesign",
-//     },
-//   ];
-// }
+import { useEffect } from "react";
 
 export default async function CaseStatus() {
-  try {
+  //mongodb - mjc verysafepassword
+
+  useEffect(() => {
+    console.log("trycatch....");
+  }, []);
+
+  /* try {
+    "use server"
     console.log("trycatch....");
     const response = await clientPromise;
     const db = response.db("test");
@@ -53,7 +26,7 @@ export default async function CaseStatus() {
     console.log(result);
   } catch (error) {
     console.log(error);
-  }
+  }*/
 
   function setStatusColor(statuscode) {
     if (!statuscode) return "";
@@ -92,7 +65,7 @@ export default async function CaseStatus() {
               <th>Actions</th>
             </tr>
           </thead>
-          <tbody>{console.log("test")}</tbody>
+          <tbody>{console.log("test body")}</tbody>
         </table>
       </div>
 
